@@ -5,49 +5,98 @@
 
 
 
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+// Import partials from `sass_dir` (defaults to `_sass`)
 
-$spacing-unit:     30px;
+.index-header {
+  background-color: RGBA(52, 74, 94, 1);
+  padding: 4rem 0;
+  color: #fff;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+.site-footer {
+  position: relative;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #777;
+  border-top: 1px solid #eee;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+  .copyright {
+    padding-right: 20px;
+  }
+  .github-icon{
+    position: absolute;
+    font-size: 24px;
+    left:50%;
+    color: #ccc;
+    top: 37px;
+    margin-left: -12px;
+  }
+}
 
-// Width of the content area
-$content-width:    800px;
+.mobile-visible {
+  display: none;
+}
 
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+.right {
+  float: right;
+}
+.left {
+  float: left;
 }
 
 
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+.site-footer-links {
+  margin: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+    line-height: 16px;
+
+    a {
+      color: #4183c4;
+      text-decoration: none;
+    }
+  }
+
+
+  li+li {
+    margin-left: 10px;
+  }
+}
+.navbar{
+  margin-bottom:0;
+}
+.navbar-brand{
+ padding: 10px 10px 10px 30px;
+  line-height: 30px;
+}
+.header-title-icon{
+  font-size: 30px ;
+  display: block;
+  float:left;
+  margin-right: 10px;
+}
+
+.collection-title {
+  display: table-cell;
+  padding: 20px 0;
+  vertical-align: middle;
+  .collection-header {
+    margin-top: 0;
+    font-size: 45px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  .collection-info {
+    margin: 0;
+    .meta-info {
+      margin-right: 15px;
+    }
+  }
+}

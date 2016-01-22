@@ -1,38 +1,35 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+<footer class="container-fluid">
+  <div class="site-footer">
+    <div class="copyright left mobile-block">
+      © 2016
+      <span title="{{ site.title }}">{{ site.title }}</span>
+      <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
     </div>
 
-  </div>
+    <ul class="site-footer-links right mobile-hidden">
+      <li>
+        <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+      </li>
+    </ul>
+    <a href="https://github.com/Safircn/safircn.github.io" target="_blank" aria-label="view source code">
+      <i class="fa fa-github github-icon"></i>
+    </a>
+    <ul class="site-footer-links mobile-hidden">
+      <li>
+        <a href="/" title="Home" target="">Home</a>
+      </li>
 
+
+      {% for my_page in site.pages %}
+      {% if my_page.title %}
+
+      <li>
+        <a href="{{ my_page.url | prepend: site.baseurl }}" title="{{ my_page.title }}" target="">{{ my_page.title }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+
+    </ul>
+
+  </div>
 </footer>

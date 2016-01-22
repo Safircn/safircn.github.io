@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<style>
+  .header-home {
+    background-color: RGBA(52, 74, 94, 1);
+    color: #fff;
+  }
 
-    {% include header.html %}
+  .header-home a {
+    color: #fff;
+  }
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+  .header-home .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+</style>
+
+{% include header.html %}
+<body>
+
+<div class="row index-header">
+  <div class="container">
+    <div class="collection-title">
+      <h1 class="collection-header">Code Artisan</h1>
+      <div class="collection-info">
+                    <span class="meta-info">
+                        <span class="fa fa-map-marker"></span>
+                        China ShangHai
+                    </span>
+                    <span class="tooltipped tooltipped-s tooltipped-multiline meta-info"
+                          data-toggle="tooltip"
+                          title="Golang, PHP, JavaScript">
+                        <span class="fa fa-code"></span>
+                        Web development
+                    </span>
+                    <span class="meta-info last-updated">
+                        <span class="fa fa-github-alt"></span>
+                        <a href="https://github.com/Safircn" target="_blank" style="color: #fff">@Safircn</a>
+                    </span>
       </div>
     </div>
+  </div>
+</div>
 
-    {% include footer.html %}
+<div class="page-content">
+  <div class="wrapper">
+    {{ content }}
+  </div>
+</div>
 
-  </body>
+{% include footer.html %}
 
+</body>
+{% include script-base.html %}
 </html>
